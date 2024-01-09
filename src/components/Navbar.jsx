@@ -7,7 +7,7 @@ function Navbar() {
     <header>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-3">
         <div className="container-fluid">
-          <NavLink to={"/"} className="navbar-brand">Watch Shop</NavLink>
+          <NavLink to={"/watchShop/"} className="navbar-brand">Watch Shop</NavLink>
           <button
             className="navbar-toggler"
             type="button"

@@ -23,7 +23,7 @@ function Navbar() {
             <ul className="navbar-nav ms-auto ">
               <li className="nav-item">
                 <NavLink
-                  to={"/"}
+                  to={"/watchShop/"}
                   className="nav-link mx-2"
                 >
                   Home

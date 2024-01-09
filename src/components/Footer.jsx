@@ -8,7 +8,7 @@ function Footer() {
       <div className="row">
         <div className="col d-flex py-4 row">
           <h5 className="col-md-6">
-            <NavLink to="/" className={"navbar-brand fs-4 fw-bolder text-white"}>Watch Shop</NavLink>
+            <NavLink to="/watchShop/" className={"navbar-brand fs-4 fw-bolder text-white"}>Watch Shop</NavLink>
           </h5>
           <div className="col-md-6 text-end d-flex justify-content-end gap-3">
             <i className="fa-brands fa-facebook fs-4"></i>

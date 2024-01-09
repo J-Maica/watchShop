@@ -8,9 +8,9 @@ function ViewProduct() {
   const product = AllProducts.find((e) => e.id === Number(productId));
   console.log(product);
   return (
-    <div className="mt-4 container px-lg-5 rounded-3 border shadow-lg d-grid gap-5 text-white py-5">
+    <div className="mt-4 container px-lg-5 rounded-3 border shadow-lg gap-5 text-white py-5">
       <Breadcrumbs product={product} />
-      <div className="row align-items-center">
+      <div className="row align-items-center mt-4 mt-lg-0">
         <div className="col-lg-7 p-3 p-lg-5 pt-lg-3 text-white">
           <h1 className="display-4 fw-bold lh-1">{product.name}</h1>
           <div>

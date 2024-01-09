@@ -6,8 +6,8 @@ function Hero() {
   <div>
     <div className="row align-items-center mb-5">
       <div className="col-lg-7 p-3 p-lg-5 pt-lg-3 text-white">
-        <h1 className="display-4 fw-bold lh-1">Border hero with cropped image and shadows</h1>
-        <p className="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+        <h1 className="display-4 fw-bold lh-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit</h1>
+        <p className="lead mt-2 mt-lg-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident sed voluptatibus ipsum quos dignissimos vel exercitationem eveniet deleniti at commodi! Eius, pariatur obcaecati. Assumenda ea, incidunt fugit voluptates dolore praesentium!</p>
         <div className="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
           <button type="button" className="btn btn-light btn-lg px-4 me-md-2 fw-bold">Shop Now</button>
           <button type="button" className="btn btn-outline-secondary btn-lg  px-4">Explore More</button>

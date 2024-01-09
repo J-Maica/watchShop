@@ -6,7 +6,7 @@ import Popper2 from '../components/Popper2'
 import TopSelling from '../components/TopSelling'
 function Home() {
   return (
-    <div className='mt-4 container px-lg-5 rounded-3 border shadow-lg d-grid gap-5'>
+    <div className='mt-4 container px-lg-5 rounded-3 border shadow-lg  gap-5'>
       <Hero/>
       <NewProduct/>
       <Popper/>

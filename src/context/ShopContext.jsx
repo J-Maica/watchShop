@@ -14,7 +14,6 @@ const getDefaultCart = () =>  {
 function ShopContextProvider(props) {
   const [cartItem, setCartItem] = useState(getDefaultCart())
   const [favorites, setFavorites] = useState([])
-  const [selectedProduct, setSelectedProduct] = useState(null);
 
 
   const addToCart = (itemId) => { 
@@ -66,9 +65,7 @@ function ShopContextProvider(props) {
     }
   }
 
-  const viewProduct = (itemId) => {
-    setSelectedProduct(itemId);
-  };
+
 
   const contextValue = {
     AllProducts,
@@ -79,7 +76,7 @@ function ShopContextProvider(props) {
     getItemCount,
     favorites,
     toggleFavorite,
-    viewProduct,
+    setCartItem
   };
 
   return (

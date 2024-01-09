@@ -7,7 +7,7 @@ function Navbar() {
     <header>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-3">
         <div className="container-fluid">
-          <NavLink to={"/"} className="navbar-brand">Watch Shop</NavLink>
+          <NavLink to={"/watchShop/"} className="navbar-brand">Watch Shop</NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -23,7 +23,7 @@ function Navbar() {
             <ul className="navbar-nav ms-auto ">
               <li className="nav-item">
                 <NavLink
-                  to={"/"}
+                  to={"/watchShop/"}
                   className="nav-link mx-2"
                 >
                   Home
@@ -44,11 +44,11 @@ function Navbar() {
                   Contact
                 </NavLink>
               </li>
-              <li className="nav-item">
-              <NavLink to="/cart" className="nav-link fw-bold position-relative">
-                <i className="fa-solid fa-cart-shopping"></i>
-                <p className="position-absolute top-20 start-100 translate-middle badge rounded-pill bg-">{getItemCount()}</p>
-              </NavLink>
+              <li className="nav-item d-flex">
+                <NavLink to="/cart" className="nav-link fw-bold position-relative">
+                  <i className="fa-solid fa-cart-shopping"></i>
+                  <p className="position-absolute top-20 start-100 translate-middle badge rounded-pill bg-light text-dark">{getItemCount()}</p>
+                </NavLink>
               </li>
               <li className="nav-item dropdown">
                 <a

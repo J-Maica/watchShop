@@ -15,7 +15,7 @@ function TopSelling() {
         <div className="row">
           {topProd.map((product, key) => {
             return (
-              <div className="col-lg-4 col-12 g-4" key={key}>
+              <div className="col-md-4 col-12 g-4" key={key}>
                 <div className="card border bg-transparent">
                   <i
                     className={`${
@@ -32,19 +32,19 @@ function TopSelling() {
                     alt={product.name}
                   />
                 </Link>
-                  <div className="card-body">
-                    <div className="d-flex justify-content-between">
-                      <h5 className="card-title">{product.name}</h5>
-                      <h5 className="card-title">₱ {product.price}</h5>
-                    </div>
-                    <p className="card-text">{product.description}</p>
-                    <button
-                      className="btn btn-light"
-                      onClick={() => addToCart(product.id)}
-                    >
-                      Add to cart
-                    </button>
+                <div className="card-body">
+                  <div className="d-md-flex justify-content-between">
+                    <h5 className="card-title fs-5 fs-lg-6">{product.name}</h5>
+                    <h5 className="card-title fs-5 fs-lg-6">₱ {product.price}</h5>
                   </div>
+                  <p className="card-text fs-6 text-truncate">{product.description}</p>
+                  <button
+                    className="btn btn-light btn-sm"
+                    onClick={() => addToCart(product.id)}
+                  >
+                    Add to cart
+                  </button>
+                </div>
                 </div>
               </div>
             );

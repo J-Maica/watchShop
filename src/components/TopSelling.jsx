@@ -16,15 +16,15 @@ function TopSelling() {
           {topProd.map((product, key) => {
             return (
               <div className="col-md-4 col-12 g-4" key={key}>
-                <div className="card border bg-transparent">
-                  <i
-                    className={`${
-                      favorites.includes(product.id)
-                        ? "fa-solid text-danger"
-                        : "fa-regular text-secondaryBrown "
-                    } fa-heart position-absolute top-0 end-0 m-3 z-index-1 fs-4  cursor-pointer`}
-                    onClick={() => toggleFavorite(product.id)}
-                  ></i>
+             <div className="card border bg-transparent">
+                <i
+                  className={`${
+                    favorites.includes(product.id)
+                      ? "fa-solid text-danger"
+                      : "fa-regular text-secondaryBrown "
+                  } fa-heart position-absolute top-0 end-0 m-3 z-index-1 fs-4  cursor-pointer`}
+                  onClick={() => toggleFavorite(product.id)}
+                ></i>
                 <Link to={`/product/${product.id}`}>
                   <img
                     src={product.image}
@@ -33,19 +33,21 @@ function TopSelling() {
                   />
                 </Link>
                 <div className="card-body">
-                  <div className="d-md-flex justify-content-between">
-                    <h5 className="card-title fs-5 fs-lg-6">{product.name}</h5>
-                    <h5 className="card-title fs-5 fs-lg-6">₱ {product.price}</h5>
+                <h1 className="card-title fs-5  fw-bolder">{product.name}</h1>
+                  <p className="card-text fs-6 text-truncate">
+                    {product.description}
+                  </p>
+                  <div className="d-grid d-md-flex justify-content-md-between align-items-center">
+                    <h1 className="card-title fs-5 ">₱ {product.price}</h1>
+                    <button
+                      className="btn btn-light btn-sm "
+                      onClick={() => addToCart(product.id)}
+                    >
+                      <i class="fa-solid fa-cart-plus"></i>
+                    </button>
                   </div>
-                  <p className="card-text fs-6 text-truncate">{product.description}</p>
-                  <button
-                    className="btn btn-light btn-sm"
-                    onClick={() => addToCart(product.id)}
-                  >
-                    Add to cart
-                  </button>
                 </div>
-                </div>
+              </div>
               </div>
             );
           })}

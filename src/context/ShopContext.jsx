@@ -14,6 +14,9 @@ const getDefaultCart = () =>  {
 function ShopContextProvider(props) {
   const [cartItem, setCartItem] = useState(getDefaultCart())
   const [favorites, setFavorites] = useState([])
+  const [displayProducts, setDisplayProducts] = useState(AllProducts);
+  const [searchInput, setSearchInput] = useState("");
+  const [sortProduct, setSortProduct] = useState("");
 
 
   const addToCart = (itemId) => { 
@@ -37,8 +40,6 @@ function ShopContextProvider(props) {
     
   };
   
-  
-
   const getItemCount = () => {
     let countItem = 0;
     for(const item in cartItem) {
@@ -65,6 +66,34 @@ function ShopContextProvider(props) {
     }
   }
 
+  const searchProduct = () => {
+    const newFilteredProducts = AllProducts.filter((product) =>
+      product.name.toLowerCase().includes(searchInput.toLowerCase())
+    );
+
+    setDisplayProducts(newFilteredProducts);
+  };
+
+  const clearSearch = () => {
+    setSearchInput("");
+    setDisplayProducts(AllProducts);
+  };
+
+  const setSortProducts = () => {
+    let sortedProducts = [...displayProducts];
+
+    if (sortProduct === "highestToLowest") {
+      sortedProducts.sort((a, b) => b.price - a.price);
+    } else if (sortProduct === "lowestToHighest") {
+      sortedProducts.sort((a, b) => a.price - b.price);
+    } else if (sortProduct === "") {
+      sortedProducts = [...AllProducts];
+    }
+
+    setDisplayProducts(sortedProducts);
+  };
+
+
 
 
   const contextValue = {
@@ -76,7 +105,17 @@ function ShopContextProvider(props) {
     getItemCount,
     favorites,
     toggleFavorite,
-    setCartItem
+    setCartItem,
+    displayProducts,
+    setDisplayProducts,
+    searchInput,
+    setSearchInput,
+    sortProduct,
+    setSortProduct,
+    searchProduct,
+    clearSearch,
+    setSortProducts
+    
   };
 
   return (

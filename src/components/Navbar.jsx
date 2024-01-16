@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 function Navbar() {
   const { getItemCount } = useContext(ShopContext);
@@ -7,7 +7,7 @@ function Navbar() {
     <header>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-3">
         <div className="container-fluid">
-          <NavLink to={"/watchShop/"} className="navbar-brand">Watch Shop</NavLink>
+          <Link to={"/watchShop/"} className="navbar-brand">Watch Shop</Link>
           <button
             className="navbar-toggler"
             type="button"
